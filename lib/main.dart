@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:panda/model/offer.dart';
+import 'package:panda/service/offers_service.dart';
+import 'package:provider/provider.dart';
 
 import 'view/offer_list.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MultiProvider(
+      providers: [
+        Provider(create: (context) => OffersService()),
+      ],
+      child: MyApp(),
+    ),);
 
 class MyApp extends StatelessWidget {
   @override
@@ -12,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      home: OfferList(offer: Offer("PROMO", "MONEY FOR FREE"),),
+      home: OfferList(),
     );
   }
 }
