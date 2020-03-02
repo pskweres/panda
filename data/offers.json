@@ -1,4 +1,4 @@
 [
-    {"title": "FIRST OFFER", "description": "description of first offer"},
-    {"title": "Mega PROMO", "description": "mega oferta promo!"}
+    {"title": "FIRST OFFER", "description": "description of first offer", "bank": "fairBank"},
+    {"title": "Mega PROMO", "description": "mega oferta promo!", "bank": "unfairBank"}
 ]
